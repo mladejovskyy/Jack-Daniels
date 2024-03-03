@@ -14,7 +14,24 @@ window.onscroll = function () {
   }
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Update the content of the first paragraph
+  const firstParagraph = document.querySelector(".js-contact-first");
+  firstParagraph.textContent = "Jack Daniel's Distillery";
 
+  // Update the content of the second paragraph
+  const secondParagraph = document.querySelector(".js-contact-second");
+  secondParagraph.textContent =
+    "280 Lynchburg Hwy, Lynchburg, TN 37352, United States";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const date = new Date();
+  const currYear = date.getFullYear();
+  const copyrightBox = document.querySelector(".copyright");
+
+  copyrightBox.textContent = `© ${currYear}, Jack Daniels • All rights reserved.`;
+});
 
 // AGE CHECK
 
@@ -96,23 +113,3 @@ document.getElementById("y").addEventListener("input", checkAgeAndEnableButton);
 document
   .getElementById("modalBtn")
   .addEventListener("click", checkAgeAndCloseModal);
-
-  
-document.addEventListener("DOMContentLoaded", () => {
-  // Update the content of the first paragraph
-  const firstParagraph = document.querySelector(".js-contact-first");
-  firstParagraph.textContent = "Jack Daniel's Distillery";
-
-  // Update the content of the second paragraph
-  const secondParagraph = document.querySelector(".js-contact-second");
-  secondParagraph.textContent =
-    "280 Lynchburg Hwy, Lynchburg, TN 37352, United States";
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const date = new Date();
-  const currYear = date.getFullYear();
-  const copyrightBox = document.querySelector(".copyright");
-
-  copyrightBox.textContent = `© ${currYear}, Jack Daniels • All rights reserved.`;
-});
