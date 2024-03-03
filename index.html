@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>Jack Daniels</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="nav" class="nav navbar">
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Our products</a></li>
+        <li class="logo li-logo">
+          <a href="#"><img id="navLogo" src="assets/navLogo.webp" alt="" /></a>
+        </li>
+        <li><a href="#aboutus">About us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Main -->
+    <div class="main" id="home">
+      <video autoplay muted loop id="myVideo">
+        <source src="assets/whiskey.mp4" type="video/mp4" />
+      </video>
+      <!-- Main Content -->
+      <div class="content">
+        <h1>Jack Daniels</h1>
+        <h3>The top quality world wide known whiskey</h3>
+        <a href="#products">
+          <button class="btn ourproducts">Our products</button></a
+        >
+      </div>
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h2>
+            JACK'S BIRTHDATE HAS ALWAYS BEEN A MYSTERY. HOPEFULLY YOURS ISN'T.
+          </h2>
+          <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+          <form class="modalForm">
+            <input type="number" name="" id="d" placeholder="DD" />
+            <input type="number" name="" id="m" placeholder="MM" />
+            <input type="number" name="" id="y" placeholder="YYYY" />
+          </form>
+          <button id="modalBtn" class="btn disabled" onclick="closeModal()">
+            Enter
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Products -->
+    <div class="products" id="products">
+      <div class="container">
+        <div class="product">
+          <div class="img"><img src="assets/1.png" alt="" /></div>
+          <div class="heading"><h3>Old no. 7</h3></div>
+          <div class="text">Charcoal mellowed. Drop by drop.</div>
+          <a href="#" class="btn btnProduct">Learn more</a>
+        </div>
+        <div class="product">
+          <div class="img"><img src="assets/2.png" alt="" /></div>
+          <div class="heading"><h3>Old no. 7</h3></div>
+          <div class="text">Charcoal mellowed. Drop by drop.</div>
+          <a href="#" class="btn btnProduct">Learn more</a>
+        </div>
+        <div class="product">
+          <div class="img"><img src="assets/3.png" alt="" /></div>
+          <div class="heading"><h3>Old no. 7</h3></div>
+          <div class="text">Charcoal mellowed. Drop by drop.</div>
+          <a href="#" class="btn btnProduct">Learn more</a>
+        </div>
+        <div class="product">
+          <div class="img"><img src="assets/4.png" alt="" /></div>
+          <div class="heading"><h3>Old no. 7</h3></div>
+          <div class="text">Charcoal mellowed. Drop by drop.</div>
+          <a href="#" class="btn btnProduct">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <!-- About us -->
+    <div class="aboutus" id="aboutus">
+      <div class="container">
+        <div class="about-section about-upper">
+          <div class="left">
+            <h2>About us</h2>
+            <p>
+              Welcome to Jack Daniel's – where tradition meets innovation since
+              1866. Crafted in Lynchburg, Tennessee, our iconic whiskey reflects
+              a commitment to quality and a passion for perfection. From our
+              signature charcoal mellowing to carefully selected grains, every
+              sip tells a story of timeless craftsmanship. Join us in
+              celebrating the spirit of independence and the enduring legacy of
+              Jack Daniel's – a true American classic. Cheers to history in
+              every drop.
+            </p>
+          </div>
+          <div class="right"><img src="assets/about1.png" alt="" /></div>
+        </div>
+        <div class="about-section about-lower">
+          <div class="left">
+            <h2>About Whiskey</h2>
+            <p>
+              Immerse yourself in the essence of exceptional whiskey
+              craftsmanship. Crafted from the finest grains and distilled with
+              meticulous precision, our whiskey is a harmonious blend of
+              tradition and quality. The alchemy begins with carefully selected
+              grains, and our unique distillation process captures the essence
+              of each element. Aged to perfection, every sip unfolds a rich
+              tapestry of flavors, embodying the art and soul of whiskey. Join
+              us in celebrating the extraordinary journey from grain to glass.
+              Cheers to the craftsmanship and legacy that define the true spirit
+              of whiskey.
+            </p>
+          </div>
+          <div class="right"><img src="assets/about2.png" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact container" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-section">
+        <div class="left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.877451250096!2d-86.36932412364466!3d35.284173051682494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8863d0a5b2278efd%3A0x8ac10d5b9b70af8c!2sJack%20Daniel&#39;s%20Distillery!5e0!3m2!1sen!2scz!4v1709400233217!5m2!1sen!2scz"
+            width="600"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="js-contact">
+            <p class="js-contact-first"></p>
+            <p class="js-contact-second"></p>
+          </div>
+        </div>
+        <div class="right">
+          <form class="contactForm" action="">
+            <input placeholder="Your name" type="text" />
+            <input placeholder="email@gmail.com" type="text" />
+            <textarea
+              placeholder="Your message"
+              name=""
+              id=""
+              cols="25"
+              rows="10"></textarea>
+            <button type="submit" class="btn contactBtn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="upper">
+        <a href="#" class="footer-logo">Jack Daniels</a>
+      </div>
+      <div class="lower">
+        <div class="left copyright"></div>
+        <div class="right">Web and Design <a href="">mladejovsky</a></div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
