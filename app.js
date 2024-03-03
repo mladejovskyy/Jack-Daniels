@@ -14,7 +14,7 @@ window.onscroll = function () {
   }
 };
 
-/*
+
 
 // AGE CHECK
 
@@ -97,7 +97,7 @@ document
   .getElementById("modalBtn")
   .addEventListener("click", checkAgeAndCloseModal);
 
-  */
+  
 document.addEventListener("DOMContentLoaded", () => {
   // Update the content of the first paragraph
   const firstParagraph = document.querySelector(".js-contact-first");
