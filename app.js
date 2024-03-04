@@ -50,9 +50,35 @@ window.onload = function () {
 };
 
 // Attach event listeners to input fields
-document.getElementById("d").addEventListener("input", checkDateAndEnableButton);
-document.getElementById("m").addEventListener("input", checkDateAndEnableButton);
-document.getElementById("y").addEventListener("input", checkDateAndEnableButton);
+document
+  .getElementById("d")
+  .addEventListener("input", checkDateAndEnableButton);
+document
+  .getElementById("m")
+  .addEventListener("input", checkDateAndEnableButton);
+document
+  .getElementById("y")
+  .addEventListener("input", checkDateAndEnableButton);
+
+// Add event listener for "keydown" on input fields
+document.getElementById("d").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    checkDateAndEnableButton();
+  }
+});
+document.getElementById("m").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    checkDateAndEnableButton();
+  }
+});
+document.getElementById("y").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    checkDateAndEnableButton();
+  }
+});
 
 // Function to validate input values
 function validateInput(value, min, max) {
@@ -121,8 +147,10 @@ function checkAgeAndEnableButton() {
   var age = calculateAge();
   var modalBtn = document.getElementById("modalBtn");
 
-  if (age === -1) {
-    modalBtn.disabled = true; // Invalid date, disable button
+  if (age === -1 || !modalBtn.disabled) {
+    modalBtn.disabled = true; // Invalid date or button already enabled, disable button
+    modalBtn.classList.add("disabled");
+    modalBtn.classList.remove("active");
     return;
   }
 

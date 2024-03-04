@@ -26,7 +26,15 @@ h5 {
   font-weight: 400;
 }
 
+h2 {
+  color: #baab8f;
+}
+
 /* Common CSS */
+
+.phone-nav {
+  display: none !important;
+}
 
 .disabled {
   filter: opacity(0.5);
@@ -55,7 +63,8 @@ h5 {
 }
 
 .btn:hover {
-  background-color: #fff;
+  background-color: #baab8f;
+  border-color: #baab8f;
   color: #000;
 }
 
@@ -77,7 +86,7 @@ h5 {
   margin: auto;
   margin-top: 0vh;
   padding: 20px;
-  border: 1px solid #74573a;
+  border: 1px solid #080603;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -85,6 +94,10 @@ h5 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.modal-content h2 {
+  color: #fff;
 }
 
 .modal-content img {
@@ -143,14 +156,14 @@ input[type="number"] {
 }
 
 .btn.active {
-  border: 2px solid #BAAB8F;
-  color: #BAAB8F;
-  transition: all .2s ease;
+  border: 2px solid #baab8f;
+  color: #baab8f;
+  transition: all 0.2s ease;
 }
 
 .btn.active:hover {
   color: #000;
-  background-color: #BAAB8F;
+  background-color: #baab8f;
 }
 
 /* END OF MODAL */
@@ -168,7 +181,7 @@ input[type="number"] {
 
 .overlay {
   padding: 5px 0;
-  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
 }
 
 .nav ul {
@@ -259,7 +272,7 @@ input[type="number"] {
 }
 
 .product .text {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 1vh 0 2vh 0;
 }
 
@@ -391,7 +404,7 @@ input[type="number"] {
 
 .contactForm input:focus,
 .contactForm textarea:focus {
-  border: 2px solid white;
+  border: 2px solid #baab8f;
 }
 
 /* Contact end */
@@ -404,14 +417,17 @@ input[type="number"] {
 
 .footer .upper {
   color: black;
-    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) );
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
   padding: 4vh 0;
 }
 
 .footer-logo {
-  font-size: 3rem;
   color: white;
-  margin-left: 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo img {
@@ -419,7 +435,7 @@ input[type="number"] {
 }
 
 .footer .lower {
-  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
   display: flex;
   justify-content: space-between;
   padding: 1.25vh 10%;
@@ -430,10 +446,11 @@ input[type="number"] {
   color: white;
   border-bottom: 0px solid white;
   font-weight: 700;
+  transition: all 0.2s ease;
 }
 
 .footer .lower .right a:hover {
-  border-bottom: 1px solid white;
+  color: #baab8f;
 }
 
 /* Footer end */
@@ -443,6 +460,15 @@ input[type="number"] {
 /* ==================================================================== */
 
 @media screen and (max-width: 1445px) {
+  .modalForm input {
+    width: 10vw;
+  }
+
+  #modalBtn {
+    width: 10vw;
+    height: 6vh;
+  }
+
   .btn.ourproducts {
     width: 15vw;
     height: 6vh;
@@ -477,9 +503,23 @@ input[type="number"] {
     width: 10vw;
     height: 6vh;
   }
+
+  .footer-logo img {
+    width: 15vw;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .modalForm input {
+    width: 13vw;
+    height: 8vw;
+  }
+
+  #modalBtn {
+    width: 15vw;
+    height: 6.5vh;
+  }
+
   .btn.ourproducts {
     width: 20vw;
   }
@@ -520,12 +560,154 @@ input[type="number"] {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+  .modalForm input {
+    width: 18vw;
+    height: 10vw;
+  }
+
+  #modalBtn {
+    width: 20vw;
+    height: 6.5vh;
+  }
+
   .content h1 {
     font-size: 6rem;
   }
 
   .content h3 {
     font-size: 1.4rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .product .text {
+    text-align: center;
+  }
+
+  .btn.btnProduct {
+    width: 20vw;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+    width: 45vw;
+  }
+
+  .about-lower:last-child p,
+  .about-lower:last-child h2 {
+    transform: translateX(5vw);
+  }
+  .contact-section {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .contactForm input,
+  .contactForm textarea {
+    width: 60vw;
+  }
+
+  .contactForm {
+    margin-bottom: 5vh;
+  }
+
+  .footer-logo img {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .modal-content h2 {
+    text-align: center;
+  }
+  .modalForm input {
+    width: 30vw;
+    height: 18vw;
+  }
+
+  #modalBtn {
+    width: 35vw;
+    height: 7vh;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn.ourproducts {
+    width: 40vw;
+  }
+
+  .product {
+    width: 80vw;
+  }
+
+  .btn.btnProduct {
+    width: 40vw;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-section p {
+    width: 80vw;
+    margin-bottom: 5vh;
+  }
+
+  .about-section .right {
+    height: 30vh;
+  }
+
+  .about-section img {
+    width: 80vw;
+  }
+
+  iframe {
+    width: 80vw;
+  }
+  .js-contact {
+    width: 80vw;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    width: 80vw;
+  }
+
+  .contactBtn {
+    width: 40vw;
+  }
+
+  .footer .lower {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    width: 30vw;
+  }
+
+  .phone-hidden {
+    display: none;
+  }
+
+  .phone-nav {
+    display: flex !important;
+  }
+
+  .nav ul {
+    padding: 1vh 0;
+  }
+
+  .nav ul li {
+    font-size: 1.1rem;
   }
 }
