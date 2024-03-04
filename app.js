@@ -129,9 +129,11 @@ function checkAgeAndEnableButton() {
   if (age >= 18) {
     modalBtn.disabled = false; // Enable button
     modalBtn.classList.remove("disabled");
+    modalBtn.classList.add("active");
   } else {
     modalBtn.disabled = true; // Disable button
     modalBtn.classList.add("disabled");
+    modalBtn.classList.remove("active");
   }
 }
 

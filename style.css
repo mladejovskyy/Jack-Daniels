@@ -136,6 +136,23 @@ input[type="number"] {
   margin: 50px 0;
 }
 
+#modalBtn {
+  font-weight: 500;
+  text-transform: uppercase;
+  border-width: 2px;
+}
+
+.btn.active {
+  border: 2px solid #BAAB8F;
+  color: #BAAB8F;
+  transition: all .2s ease;
+}
+
+.btn.active:hover {
+  color: #000;
+  background-color: #BAAB8F;
+}
+
 /* END OF MODAL */
 
 /* NAVBAR START */
