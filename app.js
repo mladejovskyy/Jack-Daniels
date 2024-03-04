@@ -1,15 +1,14 @@
 // Nav scroll background
 const navLogo = document.getElementById("navLogo");
+const navOverlay = document.getElementsByClassName("overlay");
 const nav = document.getElementById("nav");
 window.onscroll = function () {
   if (
     document.body.scrollTop >= 200 ||
     document.documentElement.scrollTop >= 200
   ) {
-    nav.style.backgroundColor = "#392009";
     navLogo.style.scale = 0.75;
   } else {
-    nav.style.backgroundColor = "#39200900";
     navLogo.style.scale = 1;
   }
 };
@@ -50,7 +49,44 @@ window.onload = function () {
   openModal();
 };
 
-modalBtn.disabled = true;
+// Attach event listeners to input fields
+document.getElementById("d").addEventListener("input", checkDateAndEnableButton);
+document.getElementById("m").addEventListener("input", checkDateAndEnableButton);
+document.getElementById("y").addEventListener("input", checkDateAndEnableButton);
+
+// Function to validate input values
+function validateInput(value, min, max) {
+  return value >= min && value <= max;
+}
+
+// Function to check date validity and enable/disable modalBtn
+function checkDateAndEnableButton() {
+  var dayInput = document.getElementById("d");
+  var monthInput = document.getElementById("m");
+  var yearInput = document.getElementById("y");
+  var modalBtn = document.getElementById("modalBtn");
+
+  var day = parseInt(dayInput.value);
+  var month = parseInt(monthInput.value);
+  var year = parseInt(yearInput.value);
+
+  // Validate input values
+  var validDay = validateInput(day, 1, 31);
+  var validMonth = validateInput(month, 1, 12);
+  var validYear = validateInput(year, 1900, 2024);
+
+  // Set border color based on validation
+  dayInput.style.border = validDay ? "2px solid #BAAB8F" : "2px solid red";
+  monthInput.style.border = validMonth ? "2px solid #BAAB8F" : "2px solid red";
+  yearInput.style.border = validYear ? "2px solid #BAAB8F" : "2px solid red";
+
+  if (validDay && validMonth && validYear) {
+    checkAgeAndEnableButton();
+  } else {
+    modalBtn.disabled = true;
+    modalBtn.classList.add("disabled");
+  }
+}
 
 // Function to calculate age
 function calculateAge() {
@@ -98,16 +134,6 @@ function checkAgeAndEnableButton() {
     modalBtn.classList.add("disabled");
   }
 }
-
-// Automatically open the modal on page load
-window.onload = function () {
-  openModal();
-};
-
-// Attach event listeners to input fields
-document.getElementById("d").addEventListener("input", checkAgeAndEnableButton);
-document.getElementById("m").addEventListener("input", checkAgeAndEnableButton);
-document.getElementById("y").addEventListener("input", checkAgeAndEnableButton);
 
 // Attach event listener to "Enter" button
 document

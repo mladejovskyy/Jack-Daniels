@@ -69,21 +69,26 @@ h5 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9990;
 }
 
 .modal-content {
   background-color: #080603;
   margin: auto;
-  margin-top: 8vh;
+  margin-top: 0vh;
   padding: 20px;
   border: 1px solid #74573a;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.modal-content img {
+  margin-bottom: 10vh;
 }
 
 .close {
@@ -101,7 +106,7 @@ h5 {
 }
 
 .modalForm input {
-  background-color: #313131;
+  background-color: #202020;
   border: 2px solid transparent; /* Set initial border to transparent */
   outline: none;
   height: 6vw;
@@ -136,12 +141,17 @@ input[type="number"] {
 /* NAVBAR START */
 
 .nav {
-  padding: 5px 0;
   position: fixed;
   top: 0;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 1000;
+  background: url(assets/bgOverlay.jpg);
+}
+
+.overlay {
+  padding: 5px 0;
+  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
 }
 
 .nav ul {
@@ -371,9 +381,14 @@ input[type="number"] {
 
 /* Footer start */
 
+.footer {
+  background-image: url(assets/bgOverlay.jpg);
+}
+
 .footer .upper {
-  background-color: #392009;
-  padding: 3vh 0;
+  color: black;
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) );
+  padding: 4vh 0;
 }
 
 .footer-logo {
@@ -382,8 +397,12 @@ input[type="number"] {
   margin-left: 10%;
 }
 
+.footer-logo img {
+  width: 10vw;
+}
+
 .footer .lower {
-  background-color: #1d1003;
+  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
   display: flex;
   justify-content: space-between;
   padding: 1.25vh 10%;
