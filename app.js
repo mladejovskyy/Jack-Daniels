@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyrightBox = document.querySelector(".copyright");
 
   copyrightBox.textContent = `© ${currYear}, Jack Daniels • All rights reserved.`;
+
+   modalBtn.disabled = true;
 });
 
 // AGE CHECK
